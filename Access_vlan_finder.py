@@ -159,14 +159,14 @@ while True:
             for vlan in filtered_vlans:
                 print(f"switch_ip: {vlan['switch_ip']}, Interface: {vlan['interface']}, VLAN ID: {vlan['vlan_id']} ")
     elif vlan_id_to_filter == 'all':
-        value = input("You want't to extract mac address of this vlan Y/N: ").upper()
-        if value == "Y":
-            mac_details = find_mac_address(filtered_vlans, username, password)
+        value_all = input("You want't to extract mac address of this vlan Y/N: ").upper()
+        if value_all == "Y":
+            mac_details = find_mac_address(vlan_list, username, password)
             for vlan in mac_details:
                 print(f"switch_ip: {vlan['switch_ip']}, Interface: {vlan['interface']}, VLAN ID: {vlan['vlan_id']} , mac_address: {vlan['mac_address']} , int_status: {vlan['int_status']}")
         else:
-        for vlan in vlan_list:
-            print(f"switch_ip: {vlan['switch_ip']}, Interface: {vlan['interface']}, VLAN ID: {vlan['vlan_id']}")
+            for vlan in vlan_list:
+                print(f"switch_ip: {vlan['switch_ip']}, Interface: {vlan['interface']}, VLAN ID: {vlan['vlan_id']}")
     else:
         # Count the occurrences of each VLAN ID if no match found
         print(f"No interfaces found with VLAN ID {vlan_id_to_filter}. Showing VLAN counts:")

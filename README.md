@@ -20,8 +20,8 @@ This Python script is designed to extract and analyze VLAN and MAC address infor
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/py-raja/Cisco_access_port_finder.git
+   cd Cisco_access_port_finder
    ```
 
 2. Install the required Python library:
